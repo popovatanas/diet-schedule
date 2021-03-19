@@ -1,0 +1,28 @@
+<mat-form-field appearance="fill">
+  <mat-label>Избор на ден:</mat-label>
+  <mat-select [(ngModel)]="selectedDietItem" name="dietItem">
+    <mat-option *ngFor="let dietItem of dietItems" [value]="dietItem" [ngClass]="dietItem.dayNumber === currentDayNumber ? 'highlighted' : ''" >
+      {{ dietItem.dayNumber }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<div *ngIf="selectedDietItem">
+  <div>
+    Ден: {{ selectedDietItem.dayNumber }}
+  </div>
+  <div>
+    {{ selectedDietItem.breakfastTime }} {{ selectedDietItem.breakfast }}
+  </div>
+  <div>
+    {{ selectedDietItem.morningSnackTime }} {{ selectedDietItem.morningSnack }}
+  </div>
+  <div>
+    {{ selectedDietItem.lunchTime }} {{ selectedDietItem.lunch }}
+  </div>
+  <div>
+    {{ selectedDietItem.afternoonSnackTime }} {{ selectedDietItem.afternoonSnack }}
+  </div>
+  <div>
+    {{ selectedDietItem.dinnerTime }} {{ selectedDietItem.dinner }}
+  </div>
+</div>
