@@ -7,6 +7,7 @@ import { DietViewComponent } from './views/diet-view/diet-view.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MatSelectModule } from '@angular/material/select';
 	BrowserAnimationsModule,
 	FormsModule,
   MatSelectModule,
+  MatListModule,
   ],
   providers: [
 

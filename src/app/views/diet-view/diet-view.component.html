@@ -1,28 +1,30 @@
-<mat-form-field appearance="fill">
-  <mat-label>Избор на ден:</mat-label>
-  <mat-select [(ngModel)]="selectedDietItem" name="dietItem">
-    <mat-option *ngFor="let dietItem of dietItems" [value]="dietItem" [ngClass]="dietItem.dayNumber === currentDayNumber ? 'highlighted' : ''" >
-      {{ dietItem.dayNumber }}
-    </mat-option>
-  </mat-select>
+<mat-form-field appearance="fill" class="left-padding">
+	<mat-label>Избор на ден:</mat-label>
+	<mat-select [(ngModel)]="selectedDietItem" name="dietItem">
+		<mat-option *ngFor="let dietItem of dietItems" [value]="dietItem" [ngClass]="dietItem.dayNumber === currentDayNumber ? 'highlighted' : ''" >
+			{{ dietItem.dayNumber }}
+		</mat-option>
+	</mat-select>
 </mat-form-field>
 <div *ngIf="selectedDietItem">
-  <div>
-    Ден: {{ selectedDietItem.dayNumber }}
-  </div>
-  <div>
-    {{ selectedDietItem.breakfastTime }} {{ selectedDietItem.breakfast }}
-  </div>
-  <div>
-    {{ selectedDietItem.morningSnackTime }} {{ selectedDietItem.morningSnack }}
-  </div>
-  <div>
-    {{ selectedDietItem.lunchTime }} {{ selectedDietItem.lunch }}
-  </div>
-  <div>
-    {{ selectedDietItem.afternoonSnackTime }} {{ selectedDietItem.afternoonSnack }}
-  </div>
-  <div>
-    {{ selectedDietItem.dinnerTime }} {{ selectedDietItem.dinner }}
-  </div>
+	<span class="left-padding">
+		Ден: {{ selectedDietItem.dayNumber }}
+	</span>
+	<mat-selection-list #shoes [multiple]="false">
+		<mat-list-option>
+			{{ selectedDietItem.breakfastTime }} {{ selectedDietItem.breakfast }}
+		</mat-list-option>
+		<mat-list-option>
+			{{ selectedDietItem.morningSnackTime }} {{ selectedDietItem.morningSnack }}
+		</mat-list-option>
+		<mat-list-option>
+			{{ selectedDietItem.lunchTime }} {{ selectedDietItem.lunch }}
+		</mat-list-option>
+		<mat-list-option>
+			{{ selectedDietItem.afternoonSnackTime }} {{ selectedDietItem.afternoonSnack }}
+		</mat-list-option>
+		<mat-list-option>
+			{{ selectedDietItem.dinnerTime }} {{ selectedDietItem.dinner }}
+		</mat-list-option>
+	</mat-selection-list>
 </div>
