@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DietItem } from 'src/app/data-types/diet-item.type';
 import { Trainee } from 'src/app/data-types/trainee.type';
-import { traineeData } from 'src/app/data/trainee.type';
+import { traineeData } from 'src/app/data/trainee.data';
 import { DateUtil } from 'src/app/utils/date-util';
-import maxBy from 'lodash';
-import { dietData } from 'src/app/data/diet.data.type';
+import { dietData } from 'src/app/data/diet.data';
 
 @Component({
   selector: 'app-diet-view',
